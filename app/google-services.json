@@ -1,65 +1,26 @@
 {
   "project_info": {
-    "project_number": "829880619701",
-    "project_id": "login-register-firebase-ea277",
-    "storage_bucket": "login-register-firebase-ea277.appspot.com"
+    "project_number": "318430878625",
+    "project_id": "shopping-cart-mad",
+    "storage_bucket": "shopping-cart-mad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:829880619701:android:eb48dd18d196fe651b24fc",
+        "mobilesdk_app_id": "1:318430878625:android:4362caf7eccb74e16cc9e0",
         "android_client_info": {
           "package_name": "com.example.ecom"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "829880619701-1coa289lt6uk9sqmghkalt5rrudgbtjo.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC8XTYJp-GOrwQ-QnSmZMFvBOv-jVz0N54"
+          "current_key": "AIzaSyAu4i4fWxGbt-7MgnISdoNrJ1dfEWyyAZM"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "829880619701-1coa289lt6uk9sqmghkalt5rrudgbtjo.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:829880619701:android:3f8022bec6fafdc61b24fc",
-        "android_client_info": {
-          "package_name": "com.example.onlineshopping"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "829880619701-1coa289lt6uk9sqmghkalt5rrudgbtjo.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC8XTYJp-GOrwQ-QnSmZMFvBOv-jVz0N54"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "829880619701-1coa289lt6uk9sqmghkalt5rrudgbtjo.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
