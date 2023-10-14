@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ECom</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="first_slide">Fast Delivery</string>
+    <string name="second_slide">Good Service</string>
+    <string name="third_slide">Choose your products</string>
+
+    <string name="description_1">We guarantee swift and efficient shipping to get your products to you in record time.</string>
+    <string name="description_2">Our dedicated team is committed to providing excellent customer support and assistance throughout your shopping experience.</string>
+    <string name="description_3">Enjoy the freedom to select from a wide range of high-quality items that suit your preferences and needs.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
