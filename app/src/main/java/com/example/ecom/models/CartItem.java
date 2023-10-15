@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CartItem {
 
     private Product product;
@@ -53,6 +56,14 @@ public class CartItem {
     @BindingAdapter("android:setVal")
     public static void getSelectedSpinnerValue(Spinner spinner, int quantity) {
         spinner.setSelection(quantity - 1, true);
+    }
+
+    public static List<Integer> getQuantityList() {
+        List<Integer> quantities = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            quantities.add(i);
+        }
+        return quantities;
     }
 
     public static DiffUtil.ItemCallback<CartItem> itemCallback = new DiffUtil.ItemCallback<CartItem>() {
