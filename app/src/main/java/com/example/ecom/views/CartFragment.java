@@ -58,7 +58,7 @@ public class CartFragment extends Fragment implements CartListAdapter.CartInterf
             @Override
             public void onChanged(List<CartItem> cartItems) {
                 cartListAdapter.submitList(cartItems);
-                fragmentCartBinding.placeOrderButton.setEnabled(cartItems.size() > 0);
+                fragmentCartBinding.CheckOutButton.setEnabled(cartItems.size() > 0);
             }
         });
 
@@ -69,7 +69,7 @@ public class CartFragment extends Fragment implements CartListAdapter.CartInterf
             }
         });
 
-        fragmentCartBinding.placeOrderButton.setOnClickListener(new View.OnClickListener() {
+        fragmentCartBinding.CheckOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_cartFragment_to_orderFragment);

@@ -1,5 +1,6 @@
 package com.example.ecom.adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.example.ecom.models.CartItem;
 public class CartListAdapter extends ListAdapter<CartItem, CartListAdapter.CartVH> {
 
     private CartInterface cartInterface;
+
     public CartListAdapter(CartInterface cartInterface) {
         super(CartItem.itemCallback);
         this.cartInterface = cartInterface;
@@ -30,13 +32,14 @@ public class CartListAdapter extends ListAdapter<CartItem, CartListAdapter.CartV
 
     @Override
     public void onBindViewHolder(@NonNull CartVH holder, int position) {
-        holder.cartRowBinding.setCartItem(getItem(position));
-        holder.cartRowBinding.executePendingBindings();
+        holder.bind(getItem(position));
     }
+
 
     class CartVH extends RecyclerView.ViewHolder {
 
         CartRowBinding cartRowBinding;
+
         public CartVH(@NonNull CartRowBinding cartRowBinding) {
             super(cartRowBinding.getRoot());
             this.cartRowBinding = cartRowBinding;
@@ -52,10 +55,16 @@ public class CartListAdapter extends ListAdapter<CartItem, CartListAdapter.CartV
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     int quantity = position + 1;
-                    if (quantity == getItem(getAdapterPosition()).getQuantity()) {
+                    CartItem cartItem = getItem(getAdapterPosition());
+                    if (quantity == cartItem.getQuantity()) {
                         return;
                     }
-                    cartInterface.changeQuantity(getItem(getAdapterPosition()), quantity);
+
+                    // Debug logs
+                    Log.d("CartListAdapter", "onItemSelected: Quantity changed to " + quantity + " for position " + getAdapterPosition());
+
+                    // Call the interface method
+                    cartInterface.changeQuantity(cartItem, quantity);
                 }
 
                 @Override
@@ -64,10 +73,18 @@ public class CartListAdapter extends ListAdapter<CartItem, CartListAdapter.CartV
                 }
             });
         }
+
+        public void bind(CartItem cartItem) {
+            cartRowBinding.setCartItem(cartItem);
+            cartRowBinding.executePendingBindings();
+        }
     }
+
+
 
     public interface CartInterface {
         void deleteItem(CartItem cartItem);
+
         void changeQuantity(CartItem cartItem, int quantity);
     }
 }

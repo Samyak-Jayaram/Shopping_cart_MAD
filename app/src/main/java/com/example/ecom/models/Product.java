@@ -16,12 +16,15 @@ public class Product {
     private boolean isAvailable;
     private String imageUrl;
 
-    public Product(String id, String name, double price, boolean isAvailable, String imageUrl) {
+    private String description;
+
+    public Product(String id, String name, double price, boolean isAvailable, String imageUrl , String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.isAvailable = isAvailable;
         this.imageUrl = imageUrl;
+        this.description =description;
     }
 
     public String getId() {
@@ -48,6 +51,11 @@ public class Product {
         this.price = price;
     }
 
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description =description;}
+
+
     public boolean isAvailable() {
         return isAvailable;
     }
@@ -72,6 +80,7 @@ public class Product {
                 ", price=" + price +
                 ", isAvailable=" + isAvailable +
                 ", imageUrl='" + imageUrl + '\'' +
+                " , description='" +description + '\''+
                 '}';
     }
 
@@ -84,6 +93,7 @@ public class Product {
                 isAvailable() == product.isAvailable() &&
                 getId().equals(product.getId()) &&
                 getName().equals(product.getName()) &&
+                getDescription().equals(product.getDescription()) &&
                 getImageUrl().equals(product.getImageUrl());
     }
 
